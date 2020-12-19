@@ -25,7 +25,7 @@ As this is to demonstrate REST API for shopping cart,for ease of implementation 
 - Java 8
 - Maven 3.6.3
 
-## API Features
+## Features
 
 |   API-NAME	       |  REST METHOD |   ENDPOINT   | REQUEST HEADER  |
 |:------------------:|:-------------|:-----------------------:|:--------------:|
@@ -44,7 +44,7 @@ To create an executable jar run:<br>
 $ mvn clean package<br>
 To run that application, use the java -jar command, as follows:
 
-$ java -jar target/shopping-cart-0.0.1-SNAPSHOT.jar<br>
+$ java -jar target/justshopme-shopping-cart-0.0.1-SNAPSHOT.jar<br>
 To exit the application, press ctrl-c.
 
 **Using STS**<br>
@@ -52,3 +52,12 @@ Start the Spring boot Application using STS Run As "Spring Boot App"
 
 ## Testing
 
+**CLI-using CURL**<br>
+curl http://localhost:8080/shop/availableProducts
+curl -X GET -H "user-id: testuser1" http://localhost:8080/shop/viewCart
+curl -X POST -H "user-id: testuser1" http://localhost:8080/shop/addItem/XYZ1
+curl -X DELETE -H "user-id: testuser1" http://localhost:8080/shop/addItem/XYZ1
+curl -X POST -H "user-id: testuser1" http://localhost:8080/shop/checkout
+
+
+**Using Postman**<br>
